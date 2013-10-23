@@ -1,3 +1,5 @@
+require 'pry'
+
 def oauth_consumer
   raise RuntimeError, "You must set TWITTER_KEY and TWITTER_SECRET in your server environment." unless ENV['TWITTER_KEY'] and ENV['TWITTER_SECRET']
   @consumer ||= OAuth::Consumer.new(
